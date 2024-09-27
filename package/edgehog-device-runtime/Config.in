@@ -8,6 +8,7 @@ config BR2_PACKAGE_EDGEHOG_DEVICE_RUNTIME
             bool "edgehog-device-runtime"
             depends on BR2_PACKAGE_HOST_RUSTC_TARGET_ARCH_SUPPORTS
             depends on BR2_PACKAGE_HAS_UDEV
+            depends on BR2_PACKAGE_HAS_ZLIB
             depends on BR2_PACKAGE_DBUS
             depends on BR2_FORTIFY_SOURCE_NONE
             select BR2_PACKAGE_EDGEHOG_ASTARTE_INTERFACE

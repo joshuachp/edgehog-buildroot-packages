@@ -8,8 +8,11 @@ config BR2_PACKAGE_EDGEHOG_DEVICE_HARDWAREID_SERVICE
             bool "edgehog-device-hardwareId-service"
             depends on BR2_PACKAGE_HOST_RUSTC_TARGET_ARCH_SUPPORTS
             depends on BR2_PACKAGE_DBUS
+            depends on BR2_PACKAGE_HAS_ZLIB
             depends on BR2_PACKAGE_EDGEHOG_DEVICE_RUNTIME
             select BR2_PACKAGE_HOST_RUSTC
+            select BR2_PACKAGE_ZLIB
+            select BR2_PACKAGE_LIBZLIB
             default y
             help
               Reference project of a service that either fetches hardware id from SMBIOS/DMI or from the kernel command line.
